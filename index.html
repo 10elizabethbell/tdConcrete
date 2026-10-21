@@ -69,7 +69,7 @@ section{padding:64px 0}
 .accent{color:var(--amber-ink)}
 .on-navy .accent,.on-deep .accent,.hero .accent{color:var(--amber)}
 .head{display:grid;gap:16px;justify-items:start;max-width:640px}
-.lede{font-size:clamp(17px,4.6vw,19px);color:var(--soft);max-width:38ch}
+.lede{font-size:clamp(17px,4.6vw,19px);line-height:1.55;color:var(--soft);max-width:38ch}
 .on-navy .lede,.on-deep .lede{color:var(--on-dark-soft)}
 
 /* Eyebrow: a few key headings only. A label, not a button. */
@@ -102,7 +102,7 @@ section{padding:64px 0}
 .hero-photo{position:absolute;left:0;right:0;bottom:0;height:calc(var(--peek) + 24px);z-index:-2}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 22%}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(16,34,52,0) 0,rgba(16,34,52,0) calc(100% - var(--peek) - 24px),rgba(16,34,52,.96) calc(100% - var(--peek) - 24px),rgba(16,34,52,.55) calc(100% - var(--peek) + 30px),rgba(16,34,52,.08) 100%)}
-.hero-copy{position:relative;display:grid;gap:20px;justify-items:start;padding-top:48px;padding-bottom:var(--peek)}
+.hero-copy{position:relative;display:grid;gap:20px;justify-items:start;padding-top:48px;padding-bottom:calc(var(--peek) + 28px)}
 .hero h1{color:#fff;font-size:clamp(42px,12vw,80px);line-height:1.02;max-width:12ch}
 /* H1 bounce-in (after lpmr.co.uk): each letter slides in from 50px right with a slight overshoot, 20ms apart */
 .hero h1 .w{display:inline-block;white-space:nowrap}
@@ -160,14 +160,14 @@ input[type=text]:focus,textarea:focus{outline:none;border-color:var(--focus)}
 .chips label{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border-radius:var(--pill);background:var(--field);border:2px solid transparent;font:16px/1 var(--text);color:var(--ink);cursor:pointer;margin:0;transition:border-color .15s,background-color .15s,color .15s}
 .chips input:focus-visible+label{outline:3px solid var(--focus);outline-offset:2px}
 .chips input:checked+label{background:var(--ink);color:#fff}
-.err{display:none;font-size:15px;color:var(--error)}
+.err{display:none;font-size:16px;color:var(--error)}
 .field.bad .err{display:block}
 .field.bad input[type=text],.field.bad textarea,.field.bad input[type=text]:focus,.field.bad textarea:focus{border-color:var(--error)}
 form .btn-primary{width:100%}
 form .btn-primary:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
-.after{font-size:15px;color:var(--soft)}
+.after{font-size:16px;color:var(--soft)}
 .sent{display:grid;gap:12px;padding:16px;border-radius:16px;background:var(--field);color:var(--ink)}
-.sent pre{margin:0;white-space:pre-wrap;font:15px/1.5 var(--text);color:var(--body)}
+.sent pre{margin:0;white-space:pre-wrap;font:16px/1.5 var(--text);color:var(--body)}
 .sent .row2{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center}
 .linkbtn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:var(--pill);border:2px solid var(--ink);background:none;color:var(--ink);font:400 16px/1 var(--display);cursor:pointer;text-decoration:none}
 .nw{white-space:nowrap;font-variant-numeric:normal}
@@ -278,9 +278,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <img src="img/hero-phone.webp" alt="" width="900" height="600" fetchpriority="high">
   </picture>
   <div class="wrap hero-copy">
-    <p class="eyebrow">Excavating &amp; concrete</p>
+    <p class="eyebrow">Homes &amp; businesses</p>
     <h1 id="h1">Dug, graded and poured in <span class="accent">Essex County.</span></h1>
-    <p class="promise">We come out, look at the job with you, and give you a straight quote.</p>
+    <p class="promise">Call or send us the job, and we'll get back to you with a straight quote.</p>
     <div class="actions">
       <a class="btn btn-primary" href="#quote">Get a quote</a>
       <a class="btn btn-ghost" href="#services">See what we do</a>
@@ -291,7 +291,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="on-navy" id="services" aria-labelledby="h-services">
   <div class="wrap">
     <div class="head rise">
-      <p class="eyebrow">Full excavating &amp; concrete</p>
+      <p class="eyebrow">Services</p>
       <h2 id="h-services">From the first dig to the <span class="accent">last load of stone.</span></h2>
     </div>
     <ul class="rows">
@@ -309,11 +309,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <section class="on-paper" aria-labelledby="h-shots">
   <div class="wrap">
-    <h2 id="h-shots" class="rise">Big yard or small, <span class="accent">we'll quote it.</span></h2>
+    <h2 id="h-shots" class="rise">Big yard or small, we'll quote it.</h2>
     <ul class="shots">
-      <li class="rise"><a class="shot" href="#quote" data-job="Excavating"><img src="img/excavating.webp" alt="An excavator beside a freshly dug house foundation" width="720" height="900" loading="lazy" decoding="async"><span class="t">Excavating<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></span></a></li>
-      <li class="rise"><a class="shot" href="#quote" data-job="Concrete"><img src="img/concrete.webp" alt="A freshly poured broom-finished concrete patio" width="720" height="900" loading="lazy" decoding="async"><span class="t">Concrete<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></span></a></li>
-      <li class="rise"><a class="shot" href="#quote" data-job="Grading"><img src="img/grading.webp" alt="A backyard graded flat with fresh topsoil" width="720" height="900" loading="lazy" decoding="async"><span class="t">Grading &amp; topsoil<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></span></a></li>
+      <li class="rise"><a class="shot" href="#quote" data-job="Excavating"><img src="img/excavating.webp" alt="Example: an excavator beside a freshly dug house foundation" width="720" height="900" loading="lazy" decoding="async"><span class="t">Excavating<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></span></a></li>
+      <li class="rise"><a class="shot" href="#quote" data-job="Concrete"><img src="img/concrete.webp" alt="Example: a new broom-finished concrete driveway apron" width="720" height="900" loading="lazy" decoding="async"><span class="t">Concrete<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></span></a></li>
+      <li class="rise"><a class="shot" href="#quote" data-job="Grading"><img src="img/grading.webp" alt="Example: a backyard graded flat with fresh topsoil" width="720" height="900" loading="lazy" decoding="async"><span class="t">Grading &amp; topsoil<span class="arrow" aria-hidden="true"><svg><use href="#i-arrow"/></svg></span></span></a></li>
     </ul>
   </div>
 </section>
@@ -322,11 +322,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap split">
     <div class="rise">
       <h2 id="h-care">We treat your property like it's ours.</h2>
-      <p class="lede" style="margin-top:16px">Heavy machines on your lawn are a lot to trust anyone with. We dig where we said we would, and we leave your place ready to use.</p>
+      <p class="lede" style="margin-top:16px">Heavy machines on your lawn are a lot to trust anyone with, and we don't take that lightly.</p>
     </div>
     <ul class="claims">
-      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 34l8-22 6 14 4-8 6 16"/><path d="M4 34h32"/></svg>We walk the job with you first</li>
-      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 16l12-9 12 9v16H4z"/><path d="M28 30c3 0 8 1 8 3M30 24c2 0 6 1 6 3"/></svg>Graded so water runs away from your house</li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="7" width="22" height="28" rx="3"/><path d="M15 7V4h10v3M14 17h12M14 23h12M14 29h7"/></svg>We walk the job with you first</li>
+      <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20l10-8 10 8v9H5z"/><path d="M3 34l34-5"/><path d="M33 12s-4 4.5-4 7a4 4 0 0 0 8 0c0-2.5-4-7-4-7z"/></svg>Graded so water runs away from your house</li>
       <li class="rise"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 12h24l-2 22H10z"/><path d="M5 12h30M16 12V7h8v5"/></svg>Cleaned up before we leave</li>
     </ul>
     <!-- Their own ad claims. The brief marks them UNVERIFIED: remove `hidden` once the owner confirms each one. -->
@@ -342,9 +342,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap">
     <h2 id="h-how" class="rise">How it <span class="accent">works.</span></h2>
     <ol class="steps">
-      <li class="rise"><div><b>Call us or send the job.</b><span>Big job or small, ask.</span></div></li>
-      <li class="rise"><div><b>We come and look.</b><span>Then you get a straight quote.</span></div></li>
-      <li class="rise"><div><b>We do the work.</b><span>And leave it clean.</span></div></li>
+      <li class="rise"><div><b>Call us or fill in the form.</b><span>A rough idea is enough.</span></div></li>
+      <li class="rise"><div><b>We get back to you.</b><span>With a straight quote for the job.</span></div></li>
+      <li class="rise"><div><b>We do the work.</b><span>Driveways to parking lots.</span></div></li>
     </ol>
   </div>
 </section>
@@ -352,12 +352,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="on-paper ask" id="quote" aria-labelledby="h-ask">
   <div class="wrap">
     <div class="head rise">
-      <p class="eyebrow">Quotes</p>
       <h2 id="h-ask">Tell us about the job</h2>
-      <p class="lede">A rough idea is plenty. We'll ask the rest when we come and look.</p>
+      <p class="lede">A rough idea is plenty. We'll call you back to go over it.</p>
     </div>
     <form id="quoteForm" class="rise" novalidate>
-      <fieldset class="field" id="f-job">
+      <fieldset class="field" id="f-job" aria-describedby="e-job">
         <legend>What do you need?</legend>
         <div class="chips">
           <input type="radio" name="job" id="j1" value="Gravel driveway"><label for="j1">Gravel driveway</label>
@@ -369,6 +368,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
           <input type="radio" name="job" id="j7" value="Fill or removal"><label for="j7">Fill or removal</label>
           <input type="radio" name="job" id="j8" value="Large project"><label for="j8">Large project</label>
         </div>
+        <p class="err" id="e-job" role="alert">Pick a job or tell us a bit about it below.</p>
       </fieldset>
       <div class="field" id="f-what">
         <label for="what">Tell us a bit more <small>(optional)</small></label>
@@ -383,14 +383,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <label for="where">Your town or road <small>(optional)</small></label>
         <input type="text" id="where" name="where" autocomplete="address-level2" maxlength="80" placeholder="e.g. Essex, Kingsville, Harrow">
       </div>
-      <p class="err" id="e-job" role="alert">Pick a job above or tell us a bit about it.</p>
       <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-chat"/></svg>Text this to TD Concrete</button>
       <div class="sent" id="sent" role="status" hidden>
         <p>Didn't open your messages? Call us for a quote at <a class="nw" href="tel:+15197967967">519-796-7967</a>, or copy this and send it yourself:</p>
         <pre id="msg"></pre>
         <div class="row2"><button class="linkbtn" type="button" id="copy">Copy message</button><a class="linkbtn" id="openSms" href="sms:+15197967967">Open in Messages</a></div>
       </div>
-      <p class="after">Opens your messages with this written out. Rather talk? Call <a class="nw" href="tel:+15197967967">519-796-7967</a>.</p>
+      <p class="after">Opens your messages with this written out. No reply? Call <a class="nw" href="tel:+15197967967">519-796-7967</a>.</p>
     </form>
   </div>
 </section>
@@ -421,6 +420,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 var CONFIG = {
   SMS: '+15197967967',   // texts and calls; texting not yet confirmed by the owner
   NAME: 'TD Concrete',
+  TEXTS: true,           // false if the number can't take texts: removes the circle, the form calls instead
   FLOAT: true            // the floating text circle; false removes it
 };
 document.documentElement.classList.add('js');
@@ -454,7 +454,7 @@ document.documentElement.classList.add('js');
   [].forEach.call(document.querySelectorAll('[data-job]'),function(a){
     a.addEventListener('click',function(){
       var r=document.querySelector('#quoteForm input[name=job][value="'+a.getAttribute('data-job')+'"]');
-      if(r){r.checked=true;document.getElementById('e-job').style.display=''}
+      if(r){r.checked=true;r.dispatchEvent(new Event('change',{bubbles:true}))}
     });
   });
 })();
@@ -463,6 +463,11 @@ document.documentElement.classList.add('js');
 (function(){
   var form=document.getElementById('quoteForm');if(!form)return;
   var ejob=document.getElementById('e-job'),sent=document.getElementById('sent');
+  if(!CONFIG.TEXTS){form.querySelector('button[type=submit]').lastChild.textContent='Call 519-796-7967';form.querySelector('.after').hidden=true}
+  // the details box suggests what to mention for the chosen job
+  var hints={'Gravel driveway':'Rough length, new or a refresh, and what\'s there now…','Grading':'How big an area, and where the water sits after rain…','Topsoil or stone':'What material, and roughly how many loads…','Concrete':'What it\'s for (pad, walkway, apron) and rough size…','Excavating':'What\'s going in, and how big the dig is…','Pool fill-in or demo':'Rough pool size, and in-ground or above-ground…','Fill or removal':'What needs filling or hauling away, and how much…','Large project':'What the job is, where, and when it needs doing…'};
+  var ta=document.getElementById('what'),ph0=ta.placeholder;
+  form.addEventListener('change',function(e){if(e.target.name==='job')ta.placeholder=hints[e.target.value]||ph0});
   function val(id){return document.getElementById(id).value.trim()}
   function mark(id,bad){var f=document.getElementById(id);f.classList.toggle('bad',bad);var c=f.querySelector('input[type=text],textarea');if(c)c.setAttribute('aria-invalid',bad?'true':'false')}
   form.addEventListener('input',function(e){var f=e.target.closest('.field');if(f&&f.classList.contains('bad')&&e.target.value.trim())f.classList.remove('bad')});
@@ -483,13 +488,14 @@ document.documentElement.classList.add('js');
     var href='sms:'+CONFIG.SMS+'?&body='+encodeURIComponent(msg);
     document.getElementById('msg').textContent=msg;
     document.getElementById('openSms').href=href;
+    if(!CONFIG.TEXTS){location.href='tel:'+CONFIG.SMS;return}
     location.href=href;
     // if no messages app opened (desktop, some in-app browsers), show the message and the number instead
     setTimeout(function(){sent.hidden=false},900);
   });
   document.getElementById('copy').addEventListener('click',function(){
     var b=this,t=document.getElementById('msg').textContent;
-    if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){b.textContent='Copied'},function(){b.textContent='Select the text above to copy'});
+    if(navigator.clipboard)navigator.clipboard.writeText(t).then(function(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy message'},2500)},function(){b.textContent='Select the text above to copy'});
     else b.textContent='Select the text above to copy';
   });
 })();
@@ -497,7 +503,7 @@ document.documentElement.classList.add('js');
 /* ===== Floating text circle: shows after the hero, hides while the form is on screen ===== */
 (function(){
   var fl=document.getElementById('float');if(!fl)return;
-  if(!CONFIG.FLOAT||!('IntersectionObserver' in window)){fl.remove();return}
+  if(!CONFIG.FLOAT||!CONFIG.TEXTS||!('IntersectionObserver' in window)){fl.remove();return}
   var pastHero=false,formIn=false;
   function sync(){var on=pastHero&&!formIn;fl.classList.toggle('on',on);fl.tabIndex=on?0:-1;fl.setAttribute('aria-hidden',on?'false':'true')}
   new IntersectionObserver(function(es){pastHero=!es[0].isIntersecting;sync()},{threshold:.15}).observe(document.getElementById('hero'));
