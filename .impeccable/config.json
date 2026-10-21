@@ -20,6 +20,12 @@
         ],
         "createdAt": "2026-10-21T03:45:39.532Z",
         "reason": "Static scan misses fluid clamp() headings (30-80px); small-text steps consolidated to 14/16/17-20 after the 2026-10-20 typeset pass"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "6px",
+        "createdAt": "2026-10-21T03:49:19.376Z",
+        "reason": "Global :focus-visible ring rounding, a browser-surface detail not a component shape (Claude, 2026-10-20 build)"
       }
     ]
   }
