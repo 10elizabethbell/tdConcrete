@@ -11,6 +11,15 @@
         ],
         "createdAt": "2026-10-21T03:40:54.991Z",
         "reason": "Ellie's house calm band style (pitch-site calm-photo-style.md, chosen 2026-10-19): faint 135deg line texture on deep bands is required"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-21T03:45:39.532Z",
+        "reason": "Static scan misses fluid clamp() headings (30-80px); small-text steps consolidated to 14/16/17-20 after the 2026-10-20 typeset pass"
       }
     ]
   }
